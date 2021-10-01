@@ -11,6 +11,41 @@
   </head>
 
   <body>
+    <header id="header">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <ul class="navbar-nav mr-auto">
+            <a class="navbar-brand" href="/">#ReFilms</a>
+            <li><%= link_to 'Films', root_path, class: 'nav-link px-2 text-white'%></li>
+            <li><%= link_to 'Series', root_path, class: 'nav-link px-2 text-white'%></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15"
+            aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent15">
+              <%= link_to 'Login', root_path, class: 'btn btn-light me-2 mr-2'%>
+              <%= link_to 'Register', root_path, class: 'btn btn-light'%>
+            </div>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+  <div class="container mt-3">
     <%= yield %>
+  </div>
+
+    <footer class="fixed-bottom bg-dark">
+      <div class="container">
+        <div class="d-flex">
+          <div class="footer-left mt-2 mb-2">
+            <%= link_to 'FAQ', root_path, class: 'text-decoration-none text-white-50'%>
+            <%= link_to 'Help', root_path, class: 'text-decoration-none text-white-50'%>
+            <%= link_to 'About', root_path, class: 'text-decoration-none text-white-50'%>
+            <span class="text-decoration-none text-white-50" href="#">&copy; <i>koleshkos</i>
+          </div>
+        </div>       
+      </div>
+    </footer>
   </body>
 </html>
